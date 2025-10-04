@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+@custom-variant link-invalid (&:where(a:not([href])));
+@custom-variant link-valid (&:where(a[href]));

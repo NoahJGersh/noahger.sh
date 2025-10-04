@@ -1,0 +1,37 @@
+{
+  "godot": {
+    "name": "Godot",
+    "logo": "/resources/images/logos/godot_logo.svg",
+    "url": "https://godotengine.org"
+  },
+  "nodejs": {
+    "name": "Node.js",
+    "logo": "/resources/images/logos/nodejs_logo.svg",
+    "url": "https://nodejs.org"
+  },
+  "react": {
+    "name": "React",
+    "logo": "/resources/images/logos/react_logo.svg",
+    "url": "https://react.dev"
+  },
+  "tailwindcss": {
+    "name": "Tailwind CSS",
+    "logo": "/resources/images/logos/tailwindcss_logo.svg",
+    "url": "https://tailwindcss.com"
+  },
+  "tanstack": {
+    "name": "TanStack",
+    "logo": "/resources/images/logos/tanstack_logo.svg",
+    "url": "https://tanstack.com"
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "logo": "/resources/images/logos/typescript_logo.svg",
+    "url": "https://typescriptlang.org"
+  },
+  "vite": {
+    "name": "Vite",
+    "logo": "/resources/images/logos/vite_logo.svg",
+    "url": "https://vite.dev"
+  }
+}

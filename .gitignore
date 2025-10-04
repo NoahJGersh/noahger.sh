@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# generated files
+.tanstack
+build
+
+# local utilities
+.env.local
