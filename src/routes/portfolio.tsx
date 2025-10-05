@@ -11,9 +11,9 @@ function RouteComponent() {
       <h1 className="p-4 text-3xl">
         Portfolio <span className="text-neutral-100/10">- NoahGer.sh</span>
       </h1>
-      <div className="flex flex-col p-4 pt-2">
+      <div className="mr-auto ml-auto flex flex-row flex-wrap justify-around gap-y-4 p-4 pt-2">
         <Project
-          slug="noahger-sh"
+          id="noahger-sh"
           name="This Webpage"
           cta="You are here!"
           tech={[
@@ -29,7 +29,7 @@ function RouteComponent() {
           modernize and spruce things up.
         </Project>
         <Project
-          slug="blusterin-badlands"
+          id="blusterin-badlands"
           name="Blusterin' Badlands"
           cta="Play on Itch.io"
           link="https://kolastor.itch.io/blusterin-badlands"

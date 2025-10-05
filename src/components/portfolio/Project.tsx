@@ -2,7 +2,7 @@ import type { ProjectProps } from "~/types/projects";
 import Technology from "./Technology";
 
 export default function Project({
-  slug,
+  id,
   name,
   thumb,
   cta,
@@ -12,12 +12,12 @@ export default function Project({
 }: ProjectProps) {
   return (
     <div
-      id={slug}
+      id={id}
       className={`m-1 flex max-h-[250px] w-2xl flex-row overflow-hidden rounded-lg bg-neutral-300 shadow-md/20 dark:bg-neutral-800 dark:shadow-neutral-300`}
     >
       <div className="flex flex-col p-4">
         <h3 className="text-xl font-bold">{name}</h3>
-        <div className="overflow-y-auto">{children}</div>
+        <div className="h-full overflow-y-auto">{children}</div>
         {tech ? (
           <div className="flex flex-row justify-center">
             {tech.map((t, i) => (
@@ -37,7 +37,7 @@ export default function Project({
         </a>
       </div>
       {thumb ? (
-        <div className="flex min-h-full min-w-fit flex-col justify-center p-0">
+        <div className="flex min-h-full min-w-fit flex-col justify-center p-0 max-md:hidden">
           <img src={thumb} className="w-full" />
         </div>
       ) : (

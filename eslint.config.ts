@@ -4,9 +4,10 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
-import { defineConfig } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
+  globalIgnores(["routeTree.gen.ts"]),
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     plugins: { js },

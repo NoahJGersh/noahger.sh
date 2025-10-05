@@ -7,7 +7,7 @@ export interface Technology {
 }
 
 export interface ProjectProps {
-  slug: string;
+  id: string;
   name: string;
   thumb?: string;
   cta: string;
