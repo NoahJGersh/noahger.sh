@@ -15,6 +15,12 @@
     "logo": "/resources/images/logos/godot_logo.svg",
     "url": "https://godotengine.org"
   },
+  "nextjs": {
+    "name": "Next.js",
+    "logo": "/resources/images/logos/nextjs_logo.svg",
+    "logo_light": "/resources/images/logos/nextjs_logo_light.svg",
+    "url": "https://nextjs.org"
+  },
   "nodejs": {
     "name": "Node.js",
     "logo": "/resources/images/logos/nodejs_logo.svg",
