@@ -9,6 +9,7 @@ import {
 
 import appCss from "~/styles/app.css?url";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import NavBar from "~/components/nav/NavBar";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ function RootComponent() {
   return (
     <RootDocument>
       <QueryClientProvider client={queryClient}>
+        <NavBar />
         <Outlet />
       </QueryClientProvider>
     </RootDocument>
@@ -48,7 +50,10 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body
-        className={`min-h-screen bg-neutral-200 text-neutral-950 dark:bg-neutral-900 dark:text-neutral-200`}
+        className={`
+          min-h-screen bg-neutral-200 text-neutral-950
+          dark:bg-neutral-900 dark:text-neutral-200
+        `}
       >
         {children}
         <Scripts />
