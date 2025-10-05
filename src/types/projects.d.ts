@@ -3,6 +3,7 @@ export type TechnologyConfig = Record<string, Technology>;
 export interface Technology {
   name: string;
   logo: string;
+  logo_light?: string; // Light mode logo for better contrast
   url: string;
 }
 

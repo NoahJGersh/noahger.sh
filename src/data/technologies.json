@@ -22,6 +22,7 @@
   "tanstack": {
     "name": "TanStack",
     "logo": "/resources/images/logos/tanstack_logo.svg",
+    "logo_light": "/resources/images/logos/tanstack_logo_light.svg",
     "url": "https://tanstack.com"
   },
   "typescript": {

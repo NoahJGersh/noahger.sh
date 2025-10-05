@@ -2,6 +2,7 @@ import * as fs from "node:fs";
 import { createServerFn, useServerFn } from "@tanstack/react-start";
 import type { TechnologyConfig } from "~/types/projects";
 import { useQuery } from "@tanstack/react-query";
+import { useMediaQuery } from "usehooks-ts";
 
 const getTechData = createServerFn({ method: "GET" }).handler(
   async (): Promise<TechnologyConfig> => {
@@ -13,6 +14,7 @@ const getTechData = createServerFn({ method: "GET" }).handler(
 );
 
 export default function Technology({ id }: { id: string }) {
+  const isLightMode = useMediaQuery("(prefers-color-scheme: light)");
   const getTech = useServerFn(getTechData);
 
   const { data } = useQuery({
@@ -24,11 +26,15 @@ export default function Technology({ id }: { id: string }) {
   // or the tech isn't actually configured.
   if (!data || !data[id]) return;
 
-  const { name, logo, url } = data[id];
+  const { name, logo, logo_light, url } = data[id];
 
   return (
     <a href={url} className="m-1 mt-2 mb-2 h-8 w-8" title={name}>
-      <img src={logo} alt={name} className="h-full w-full" />
+      <img
+        src={isLightMode && !!logo_light ? logo_light : logo}
+        alt={name}
+        className="h-full w-full"
+      />
     </a>
   );
 }
