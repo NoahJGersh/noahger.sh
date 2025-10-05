@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import { Link, useMatchRoute } from "@tanstack/react-router";
 import { createServerFn, useServerFn } from "@tanstack/react-start";
-import { Navigation } from "~/types/navigation";
+import type { Navigation } from "~/types/navigation";
 import { useQuery } from "@tanstack/react-query";
 
 const getPageData = createServerFn({ method: "GET" }).handler(

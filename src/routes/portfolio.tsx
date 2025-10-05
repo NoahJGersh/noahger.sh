@@ -7,9 +7,11 @@ export const Route = createFileRoute("/portfolio")({
 
 function RouteComponent() {
   return (
-    <div className={`
-      mr-auto ml-auto flex flex-row flex-wrap justify-around gap-y-4 p-4 pt-2
-    `}>
+    <div
+      className={`
+        mr-auto ml-auto flex flex-row flex-wrap justify-around gap-y-4 p-4 pt-2
+      `}
+    >
       <Project
         id="noahger-sh"
         name="This Webpage"
@@ -22,6 +24,10 @@ function RouteComponent() {
           "typescript",
           "tailwindcss",
         ]}
+        source={{
+          host: "github",
+          url: "https://github.com/NoahJGersh/noahger.sh",
+        }}
       >
         I built this website using TanStack. Renovations are ongoing as I
         modernize and spruce things up.
