@@ -23,10 +23,12 @@ export default function NavBar() {
   const matchRoute = useMatchRoute();
 
   return (
-    <div className={`
-      sticky top-0 flex w-screen flex-row items-end mask-b-from-white
-      mask-b-from-75% mask-alpha p-4 backdrop-blur-lg
-    `}>
+    <div
+      className={`
+        sticky top-0 flex w-screen flex-row items-end mask-b-from-white
+        mask-b-from-75% mask-alpha p-4 backdrop-blur-lg
+      `}
+    >
       <h1 className="pr-8 text-3xl font-bold">NoahGer.sh</h1>
       {data?.map((page, i) =>
         page.path ? (
@@ -41,7 +43,12 @@ export default function NavBar() {
             {page.name}
           </Link>
         ) : (
-          <a key={i}>{page.name}</a>
+          <a key={i}>
+            <p className="text-neutral-500">{page.name}</p>
+            <p className="absolute top-4 text-xs text-amber-400">
+              Coming soon!
+            </p>
+          </a>
         ),
       )}
     </div>
