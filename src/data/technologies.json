@@ -1,4 +1,15 @@
 {
+  "github": {
+    "name": "GitHub",
+    "logo": "/resources/images/logos/github_logo.svg",
+    "logo_light": "/resources/images/logos/github_logo_light.svg",
+    "url": "https://github.com"
+  },
+  "gitlab": {
+    "name": "GitLab",
+    "logo": "/resources/images/logos/gitlab_logo.svg",
+    "url": "https://gitlab.com"
+  },
   "godot": {
     "name": "Godot",
     "logo": "/resources/images/logos/godot_logo.svg",
