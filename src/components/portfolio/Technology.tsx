@@ -19,15 +19,15 @@ export default function Technology({
   parentId,
   subtechs,
   url,
-  isSmall,
   noMargin,
+  isSmall,
 }: {
   id: string;
   parentId?: string;
   subtechs?: string[];
   url?: string;
-  isSmall?: boolean;
   noMargin?: boolean;
+  isSmall?: boolean;
 }) {
   // Check for light mode to use higher contrast icons
   const isLightMode = useMediaQuery("(prefers-color-scheme: light)");
@@ -104,11 +104,13 @@ export default function Technology({
             `}
             ref={subtechRef}
           >
-            <div className={`
-              absolute top-[125%] left-[-125%] z-40 flex w-[350%] basis-auto
-              flex-row flex-wrap justify-center gap-x-1 gap-y-1 rounded-md
-              bg-neutral-700 p-1 shadow-xl
-            `}>
+            <div
+              className={`
+                absolute top-[125%] left-[-125%] z-40 flex w-[350%] basis-auto
+                flex-row flex-wrap justify-center gap-x-1 gap-y-1 rounded-md
+                bg-neutral-700 p-1 shadow-xl
+              `}
+            >
               {subtechs.map((t, i) => (
                 <Technology key={i} id={t} parentId={id} noMargin />
               ))}

@@ -123,6 +123,11 @@
     "logo": "/resources/images/logos/godot_logo.svg",
     "url": "https://godotengine.org"
   },
+  "linkedin": {
+    "Name": "LinkedIn",
+    "logo": "",
+    "url": "https://www.linkedin.com"
+  },
   "neo4j": {
     "name": "Neo4j GraphQL",
     "logo": "/resources/images/logos/neo4j_logo.svg",
