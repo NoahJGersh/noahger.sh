@@ -81,11 +81,15 @@ export default function Technology({
     : "transition duration-300 not-hover:opacity-50 not-hover:brightness-75 not-hover:grayscale not-hover:dark:brightness-100";
 
   return (
-    <div className={`
-      relative
-      ${margins}
-      ${size}
-    `} ref={techRef}>
+    <div
+      className={`
+        relative
+        ${margins}
+        ${size}
+        ${colorFilter}
+      `}
+      ref={techRef}
+    >
       <a
         href={url ?? techUrl}
         target="_blank"
@@ -96,10 +100,7 @@ export default function Technology({
         <img
           src={isLightMode && !!logo_light ? logo_light : logo}
           alt={name}
-          className={`
-            h-full w-full
-            ${colorFilter}
-          `}
+          className="h-full w-full"
         />
       </a>
       {subtechs && subtechs.length > 0 && dataSubtechs ? (
