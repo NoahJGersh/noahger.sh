@@ -125,7 +125,8 @@
   },
   "linkedin": {
     "Name": "LinkedIn",
-    "logo": "",
+    "logo": "/resources/images/logos/linkedin_logo.png",
+    "logo_light": "/resources/images/logos/linkedin_logo_light.png",
     "url": "https://www.linkedin.com"
   },
   "neo4j": {
