@@ -91,7 +91,8 @@ export default function Technology({
           alt={name}
           className={`
             h-full w-full transition duration-300
-            not-hover:grayscale
+            not-hover:opacity-50 not-hover:brightness-75 not-hover:grayscale
+            not-hover:dark:brightness-100
           `}
         />
       </a>
