@@ -17,14 +17,14 @@ export default function Project({
       <div
         id={id}
         className={`
-          m-1 flex max-h-[250px] w-2xl flex-row rounded-lg bg-neutral-300
+          m-1 flex h-[250px] w-2xl flex-row rounded-lg bg-neutral-300
           shadow-md/20
           dark:bg-neutral-800 dark:shadow-neutral-300
         `}
       >
         <div className="flex w-full flex-col p-4">
           <h3 className="text-xl font-bold">{name}</h3>
-          <div className="h-full overflow-y-auto">{children}</div>
+          <div className="mb-auto h-full overflow-y-auto">{children}</div>
           {tech ? (
             <div className="flex flex-row justify-center">
               {tech.map((t, i) => (
