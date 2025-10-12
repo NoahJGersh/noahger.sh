@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 216 216">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 2.5px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fd5750;
+      }
+
+      .cls-3 {
+        fill: #fd5750;
+        fill-rule: evenodd;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Page-1">
+    <g id="hero-components">
+      <g id="Group-9">
+        <g id="logo-framework-dark">
+          <g id="bolt">
+            <polygon id="Fill" class="cls-3" points="35.7 110.9 35.5 113.8 97.7 104.9 49.5 179.9 49.3 184.3 171.7 78.6 171.7 76.3 120 82.3 169.2 6.6 169.2 3.4 35.7 110.9"/>
+            <polygon id="Stroke-1" class="cls-1" points="49.5 179.9 49.5 212.6 172.4 107.1 171.7 76.3 111.7 83.3 49.5 179.9"/>
+            <polygon id="Stroke-2" class="cls-2" points="35.7 110.9 169.2 3.4 169.4 36 140.7 80.7 91.2 122.2 35.4 130.8 35.7 110.9"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

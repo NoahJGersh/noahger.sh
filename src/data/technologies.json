@@ -1,18 +1,165 @@
 {
+  "apollo": {
+    "name": "Apollo GraphQL",
+    "logo": "/resources/images/logos/apollo_logo.svg",
+    "url": "https://apollographql.com"
+  },
+  "aws": {
+    "name": "Amazon Web Services",
+    "logo": "/resources/images/logos/aws/aws_logo.svg",
+    "logo_light": "/resources/images/logos/aws/aws_logo_light.svg",
+    "url": "https://aws.amazon.com",
+    "subtechs": {
+      "acm": {
+        "name": "AWS Certificate Manager",
+        "logo": "/resources/images/logos/aws/aws_acm_logo.svg",
+        "url": "https://aws.amazon.com/certificate-manager/"
+      },
+      "amplify": {
+        "name": "AWS Amplify",
+        "logo": "/resources/images/logos/aws/aws_amplify_logo.svg",
+        "url": "https://aws.amazon.com/amplify"
+      },
+      "apigateway": {
+        "name": "AWS API Gateway",
+        "logo": "/resources/images/logos/aws/aws_apigateway_logo.svg",
+        "url": "https://aws.amazon.com/api-gateway"
+      },
+      "cloudformation": {
+        "name": "AWS CloudFormation",
+        "logo": "/resources/images/logos/aws/aws_cloudformation_logo.svg",
+        "url": "https://aws.amazon.com/cloudformation"
+      },
+      "cloudfront": {
+        "name": "AWS CloudFront",
+        "logo": "/resources/images/logos/aws/aws_cloudfront_logo.svg",
+        "url": "https://aws.amazon.com/cloudfront"
+      },
+      "cloudtrail": {
+        "name": "AWS CloudTrail",
+        "logo": "/resources/images/logos/aws/aws_cloudtrail_logo.svg",
+        "url": "https://aws.amazon.com/cloudtrail"
+      },
+      "cloudwatch": {
+        "name": "AWS CloudWatch",
+        "logo": "/resources/images/logos/aws/aws_cloudwatch_logo.svg",
+        "url": "https://aws.amazon.com/cloudwatch"
+      },
+      "cognito": {
+        "name": "AWS Cognito",
+        "logo": "/resources/images/logos/aws/aws_cognito_logo.svg",
+        "url": "https://aws.amazon.com/cognito"
+      },
+      "dynamodb": {
+        "name": "AWS DynamoDB",
+        "logo": "/resources/images/logos/aws/aws_dynamodb_logo.svg",
+        "url": "https://aws.amazon.com/dynamodb"
+      },
+      "eventbridge": {
+        "name": "AWS EventBridge",
+        "logo": "/resources/images/logos/aws/aws_eventbridge_logo.svg",
+        "url": "https://aws.amazon.com/eventbridge"
+      },
+      "iam": {
+        "name": "AWS Identity and Access Management",
+        "logo": "/resources/images/logos/aws/aws_iam_logo.svg",
+        "url": "https://aws.amazon.com/iam"
+      },
+      "iamidentitycenter": {
+        "name": "AWS IAM Identity Center",
+        "logo": "/resources/images/logos/aws/aws_iamidentitycenter_logo.svg",
+        "url": "https://aws.amazon.com/iam/identity-center"
+      },
+      "lambda": {
+        "name": "AWS Lambda",
+        "logo": "/resources/images/logos/aws/aws_lambda_logo.svg",
+        "url": "https://aws.amazon.com/lambda"
+      },
+      "managementconsole": {
+        "name": "AWS Management Console",
+        "logo": "/resources/images/logos/aws/aws_managementconsole_logo.svg",
+        "url": "https://aws.amazon.com/console"
+      },
+      "route53": {
+        "name": "AWS Route 53",
+        "logo": "/resources/images/logos/aws/aws_route53_logo.svg",
+        "url": "https://aws.amazon.com/route53"
+      },
+      "s3": {
+        "name": "AWS S3",
+        "logo": "/resources/images/logos/aws/aws_s3_logo.svg",
+        "url": "https://aws.amazon.com/s3"
+      },
+      "sqs": {
+        "name": "AWS Simple Queue Service",
+        "logo": "/resources/images/logos/aws/aws_sqs_logo.svg",
+        "url": "https://aws.amazon.com/sqs"
+      }
+    }
+  },
+  "foundryvtt": {
+    "name": "FoundryVTT",
+    "logo": "/resources/images/logos/foundryvtt_logo.png",
+    "url": "https://foundryvtt.com"
+  },
+  "github": {
+    "name": "GitHub",
+    "logo": "/resources/images/logos/github_logo.svg",
+    "logo_light": "/resources/images/logos/github_logo_light.svg",
+    "url": "https://github.com"
+  },
+  "gitlab": {
+    "name": "GitLab",
+    "logo": "/resources/images/logos/gitlab_logo.svg",
+    "url": "https://gitlab.com"
+  },
+  "go": {
+    "name": "Go",
+    "logo": "/resources/images/logos/go_logo.svg",
+    "url": "https://go.dev"
+  },
   "godot": {
     "name": "Godot",
     "logo": "/resources/images/logos/godot_logo.svg",
     "url": "https://godotengine.org"
+  },
+  "linkedin": {
+    "Name": "LinkedIn",
+    "logo": "/resources/images/logos/linkedin_logo.png",
+    "logo_light": "/resources/images/logos/linkedin_logo_light.png",
+    "url": "https://www.linkedin.com"
+  },
+  "neo4j": {
+    "name": "Neo4j GraphQL",
+    "logo": "/resources/images/logos/neo4j_logo.svg",
+    "logo_light": "/resources/images/logos/neo4j_logo_light.svg",
+    "url": "https://neo4j.com"
+  },
+  "nextjs": {
+    "name": "Next.js",
+    "logo": "/resources/images/logos/nextjs_logo.svg",
+    "logo_light": "/resources/images/logos/nextjs_logo_light.svg",
+    "url": "https://nextjs.org"
   },
   "nodejs": {
     "name": "Node.js",
     "logo": "/resources/images/logos/nodejs_logo.svg",
     "url": "https://nodejs.org"
   },
+  "postgres": {
+    "name": "PostgreSQL",
+    "logo": "/resources/images/logos/postgres_logo.svg",
+    "url": "https://www.postgresql.org/"
+  },
   "react": {
     "name": "React",
     "logo": "/resources/images/logos/react_logo.svg",
     "url": "https://react.dev"
+  },
+  "serverless": {
+    "name": "Serverless Framework",
+    "logo": "/resources/images/logos/serverless_logo.svg",
+    "url": "https://serverless.com"
   },
   "tailwindcss": {
     "name": "Tailwind CSS",
@@ -22,7 +169,14 @@
   "tanstack": {
     "name": "TanStack",
     "logo": "/resources/images/logos/tanstack_logo.svg",
+    "logo_light": "/resources/images/logos/tanstack_logo_light.svg",
     "url": "https://tanstack.com"
+  },
+  "terraform": {
+    "name": "HashiCorp Terraform",
+    "logo": "/resources/images/logos/terraform_logo.svg",
+    "logo_light": "/resources/images/logos/terraform_logo_light.svg",
+    "url": "https://www.hashicorp.com/en/products/terraform"
   },
   "typescript": {
     "name": "TypeScript",
