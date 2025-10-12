@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -16,7 +16,10 @@ function Home() {
           href="https://www.linkedin.com/in/noahjgersh"
           target="_blank"
           rel="noopener noreferrer"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
+          className={`
+            font-semibold text-cyan-700
+            hover:text-cyan-400
+          `}
         >
           LinkedIn
         </a>
@@ -25,7 +28,10 @@ function Home() {
           href="https://github.com/NoahJGersh"
           target="_blank"
           rel="noopener noreferrer"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
+          className={`
+            font-semibold text-cyan-700
+            hover:text-cyan-400
+          `}
         >
           GitHub
         </a>
@@ -34,7 +40,10 @@ function Home() {
           href="https://gitlab.com/NoahJGersh"
           target="_blank"
           rel="noopener noreferrer"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
+          className={`
+            font-semibold text-cyan-700
+            hover:text-cyan-400
+          `}
         >
           GitLab
         </a>
@@ -45,7 +54,10 @@ function Home() {
           href="https://www.fiverr.com/s/Egx7lm8"
           target="_blank"
           rel="noopener noreferrer"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
+          className={`
+            font-semibold text-cyan-700
+            hover:text-cyan-400
+          `}
         >
           Fiverr
         </a>
@@ -57,18 +69,13 @@ function Home() {
           href="https://github.com/the-metalworks/cosmere-rpg"
           target="_blank"
           rel="noopener noreferrer"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
+          className={`
+            font-semibold text-cyan-700
+            hover:text-cyan-400
+          `}
         >
           Cosmere RPG for Foundry VTT
         </a>
-      </p>
-      <p className="p-2">
-        <Link
-          to="/portfolio"
-          className={`font-semibold text-cyan-700 hover:text-cyan-400`}
-        >
-          Portfolio
-        </Link>
       </p>
     </div>
   );

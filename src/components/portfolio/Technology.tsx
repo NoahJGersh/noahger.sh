@@ -21,6 +21,7 @@ export default function Technology({
   url,
   noMargin,
   isSmall,
+  forceIconColor,
 }: {
   id: string;
   parentId?: string;
@@ -28,6 +29,7 @@ export default function Technology({
   url?: string;
   noMargin?: boolean;
   isSmall?: boolean;
+  forceIconColor?: boolean; // Ignore grayscale filter?
 }) {
   // Check for light mode to use higher contrast icons
   const isLightMode = useMediaQuery("(prefers-color-scheme: light)");
@@ -73,12 +75,21 @@ export default function Technology({
   // Disable margins for small icons (they're positioned differently)
   const margins = noMargin ? "" : "m-1 mt-2 mb-2";
 
+  // Apply a grayscale filter when not hovered
+  const colorFilter = forceIconColor
+    ? ""
+    : "transition duration-300 not-hover:opacity-50 not-hover:brightness-75 not-hover:grayscale not-hover:dark:brightness-100";
+
   return (
-    <div className={`
-      relative
-      ${margins}
-      ${size}
-    `} ref={techRef}>
+    <div
+      className={`
+        relative
+        ${margins}
+        ${size}
+        ${colorFilter}
+      `}
+      ref={techRef}
+    >
       <a
         href={url ?? techUrl}
         target="_blank"
@@ -89,10 +100,7 @@ export default function Technology({
         <img
           src={isLightMode && !!logo_light ? logo_light : logo}
           alt={name}
-          className={`
-            h-full w-full transition duration-300
-            not-hover:grayscale
-          `}
+          className="h-full w-full"
         />
       </a>
       {subtechs && subtechs.length > 0 && dataSubtechs ? (

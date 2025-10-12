@@ -26,8 +26,8 @@ export default function NavBar() {
   return (
     <div
       className={`
-        sticky top-0 z-50 flex w-full flex-row items-end mask-b-from-white
-        mask-b-from-75% mask-alpha p-4 backdrop-blur-lg
+        sticky top-0 z-50 flex w-full flex-row items-end p-4 pb-1
+        backdrop-blur-md
       `}
     >
       <h1 className="mr-8 text-3xl font-bold">NoahGer.sh</h1>
@@ -44,9 +44,9 @@ export default function NavBar() {
             {page.name}
           </Link>
         ) : (
-          <a key={i} className="mr-4">
+          <a key={i} className="relative">
             <p className="text-neutral-500">{page.name}</p>
-            <p className="absolute top-4 text-xs text-amber-400">
+            <p className="absolute bottom-5 text-xs text-amber-400">
               Coming soon!
             </p>
           </a>
@@ -57,8 +57,14 @@ export default function NavBar() {
           id="linkedin"
           url="https://www.linkedin.com/in/NoahJGersh"
           isSmall
+          forceIconColor
         />
-        <Technology id="github" url="https://github.com/NoahJGersh" isSmall />
+        <Technology
+          id="github"
+          url="https://github.com/NoahJGersh"
+          isSmall
+          forceIconColor
+        />
       </div>
     </div>
   );
