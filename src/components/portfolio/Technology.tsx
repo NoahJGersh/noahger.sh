@@ -89,7 +89,10 @@ export default function Technology({
         <img
           src={isLightMode && !!logo_light ? logo_light : logo}
           alt={name}
-          className="h-full w-full"
+          className={`
+            h-full w-full transition duration-300
+            not-hover:grayscale
+          `}
         />
       </a>
       {subtechs && subtechs.length > 0 && dataSubtechs ? (
