@@ -3,6 +3,7 @@ import { Link, useMatchRoute } from "@tanstack/react-router";
 import { createServerFn, useServerFn } from "@tanstack/react-start";
 import type { Navigation } from "~/types/navigation";
 import { useQuery } from "@tanstack/react-query";
+import Technology from "../portfolio/Technology";
 
 const getPageData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Navigation.Page[]> => {
@@ -25,11 +26,11 @@ export default function NavBar() {
   return (
     <div
       className={`
-        sticky top-0 z-50 flex w-screen flex-row items-end mask-b-from-white
+        sticky top-0 z-50 flex w-full flex-row items-end mask-b-from-white
         mask-b-from-75% mask-alpha p-4 backdrop-blur-lg
       `}
     >
-      <h1 className="pr-8 text-3xl font-bold">NoahGer.sh</h1>
+      <h1 className="mr-8 text-3xl font-bold">NoahGer.sh</h1>
       {data?.map((page, i) =>
         page.path ? (
           <Link
@@ -43,7 +44,7 @@ export default function NavBar() {
             {page.name}
           </Link>
         ) : (
-          <a key={i}>
+          <a key={i} className="mr-4">
             <p className="text-neutral-500">{page.name}</p>
             <p className="absolute top-4 text-xs text-amber-400">
               Coming soon!
@@ -51,6 +52,14 @@ export default function NavBar() {
           </a>
         ),
       )}
+      <div className="ml-auto flex flex-row">
+        <Technology
+          id="linkedin"
+          url="https://www.linkedin.com/in/NoahJGersh"
+          isSmall
+        />
+        <Technology id="github" url="https://github.com/NoahJGersh" isSmall />
+      </div>
     </div>
   );
 }
