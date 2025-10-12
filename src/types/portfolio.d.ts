@@ -6,6 +6,7 @@ export namespace Portfolio {
     logo: string;
     logo_light?: string; // Light mode logo for better contrast
     url: string;
+    subtechs?: TechConfig;
   }
 
   interface ProjectSource {
@@ -20,6 +21,7 @@ export namespace Portfolio {
     cta: string;
     link?: string;
     tech?: string[];
+    subtechs?: Record<string, string[]>;
     source?: ProjectSource;
     children: ReactNode | undefined;
   }

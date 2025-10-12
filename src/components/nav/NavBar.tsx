@@ -25,7 +25,7 @@ export default function NavBar() {
   return (
     <div
       className={`
-        sticky top-0 flex w-screen flex-row items-end mask-b-from-white
+        sticky top-0 z-50 flex w-screen flex-row items-end mask-b-from-white
         mask-b-from-75% mask-alpha p-4 backdrop-blur-lg
       `}
     >
