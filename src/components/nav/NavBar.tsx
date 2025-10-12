@@ -44,9 +44,9 @@ export default function NavBar() {
             {page.name}
           </Link>
         ) : (
-          <a key={i} className="mr-4">
+          <a key={i} className="relative">
             <p className="text-neutral-500">{page.name}</p>
-            <p className="absolute top-4 text-xs text-amber-400">
+            <p className="absolute bottom-5 text-xs text-amber-400">
               Coming soon!
             </p>
           </a>
