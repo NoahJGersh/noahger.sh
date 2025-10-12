@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My main webpage",
   "type": "module",
-  "repository": "https://github.com/NoahJGersh/noahger-sh.git",
+  "repository": "https://github.com/NoahJGersh/noahger.sh.git",
   "author": "NoahJGersh <me@noahger.sh>",
   "license": "MIT",
   "scripts": {
