@@ -70,7 +70,13 @@ export default function Project({
         )}
         {source ? (
           <div className="absolute top-2 right-2 h-6 w-6">
-            <Technology id={source.host} url={source.url} isSmall noMargin />
+            <Technology
+              id={source.host}
+              url={source.url}
+              isSmall
+              noMargin
+              forceIconColor
+            />
           </div>
         ) : (
           <></>

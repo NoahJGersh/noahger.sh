@@ -57,8 +57,14 @@ export default function NavBar() {
           id="linkedin"
           url="https://www.linkedin.com/in/NoahJGersh"
           isSmall
+          forceIconColor
         />
-        <Technology id="github" url="https://github.com/NoahJGersh" isSmall />
+        <Technology
+          id="github"
+          url="https://github.com/NoahJGersh"
+          isSmall
+          forceIconColor
+        />
       </div>
     </div>
   );
