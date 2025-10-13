@@ -4,6 +4,9 @@ node_modules
 # generated files
 .tanstack
 build
+dist
+.output
+.amplify-hosting
 
 # local utilities
 .env.local
