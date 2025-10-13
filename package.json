@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "start": "node .output/server/index.mjs",
+    "start": "node .amplify-hosting/compute/default/index.mjs",
     "prepare": "husky"
   },
   "lint-staged": {

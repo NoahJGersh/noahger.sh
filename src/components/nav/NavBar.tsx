@@ -7,7 +7,7 @@ import Technology from "../portfolio/Technology";
 
 const getPageData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Navigation.Page[]> => {
-    const pageConfig = fs.readFileSync("src/data/pages.json");
+    const pageConfig = fs.readFileSync("public/data/pages.json");
     return JSON.parse(pageConfig.toString()) as Navigation.Page[];
   },
 );

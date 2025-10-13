@@ -9,7 +9,7 @@ const getTechData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Portfolio.TechConfig> => {
     // Setting up a db for the tech metadata is overkill,
     // so simple JSON parsing will suffice.
-    const techConfig = fs.readFileSync("src/data/technologies.json");
+    const techConfig = fs.readFileSync("public/data/technologies.json");
     return JSON.parse(techConfig.toString()) as Portfolio.TechConfig;
   },
 );
