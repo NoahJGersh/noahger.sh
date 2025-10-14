@@ -9,8 +9,8 @@ on:
       - "staging"
 
 env:
-  STAGE_URL: "https://noahger-sh-stage.noahjgersh.workers.dev/"
-  PROD_URL: "https://noahger-sh.noahjgersh.workers.dev/"
+  STAGE_URL: "https://stage.noahger.sh/"
+  PROD_URL: "https://noahger.sh/"
 
 jobs:
   deploy:

@@ -11,6 +11,12 @@
       "invocation_logs": true,
     },
   },
+  "routes": [
+    {
+      "pattern": "noahger.sh",
+      "custom_domain": true,
+    },
+  ],
   "r2_buckets": [
     {
       "binding": "STATIC_DATA",
@@ -24,6 +30,12 @@
         {
           "binding": "STATIC_DATA",
           "bucket_name": "noahger-sh",
+        },
+      ],
+      "routes": [
+        {
+          "pattern": "stage.noahger.sh",
+          "custom_domain": true,
         },
       ],
     },
