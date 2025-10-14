@@ -8,6 +8,10 @@ on:
       - "main"
       - "staging"
 
+env:
+  STAGE_URL: "https://noahger-sh-stage.noahjgersh.workers.dev/"
+  PROD_URL: "https://noahger-sh.noahjgersh.workers.dev/"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,8 +19,8 @@ jobs:
       matrix:
         node-version: [22]
     environment:
-      name: ${{ vars.ENVIRONMENT_NAME }}
-      url: ${{ vars.DEPLOYMENT_URL }}
+      name: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
+      url: ${{ github.ref_name == 'main' && env.PROD_URL || env.STAGE_URL}}
     steps:
       - name: Check variables
         run: |
