@@ -18,6 +18,15 @@ jobs:
       name: ${{ vars.ENVIRONMENT_NAME }}
       url: ${{ vars.DEPLOYMENT_URL }}
     steps:
+      - name: Check variables
+        run: |
+          echo "$ENVIRONMENT_NAME"
+          echo "$DEPLOYMENT_URL"
+          echo "$BUILD_COMMAND"
+        env:
+          ENVIRONMENT_NAME: ${{ vars.ENVIRONMENT_NAME }}
+          DEPLOYMENT_URL: ${{ vars.DEPLOYMENT_URL }}
+          BUILD_COMMAND: ${{ vars.BUILD_COMMAND }}
       - uses: actions/checkout@v5
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v5
