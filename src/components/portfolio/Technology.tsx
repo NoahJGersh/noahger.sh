@@ -75,24 +75,23 @@ export default function Technology({
   // Apply a grayscale filter when not hovered
   const colorFilter = forceIconColor
     ? ""
-    : "transition duration-300 not-hover:opacity-50 not-hover:brightness-75 not-hover:grayscale not-hover:dark:brightness-100";
+    : "opacity-50 brightness-75 grayscale dark:brightness-100";
 
   return (
-    <div
-      className={`
-        relative
-        ${margins}
-        ${size}
-        ${colorFilter}
-      `}
-      ref={techRef}
-    >
+    <div className={`
+      relative
+      ${margins}
+      ${size}
+    `} ref={techRef}>
       <a
         href={url ?? techUrl}
         target="_blank"
         rel="noopener noreferrer"
         title={name}
-        className="inline-block h-full w-full"
+        className={`
+          inline-block h-full w-full transition duration-300
+          ${!isTechHovered && !isSubtechHovered ? colorFilter : ""}
+        `}
       >
         <img
           src={isLightMode && !!logo_light ? logo_light : logo}
