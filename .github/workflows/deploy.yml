@@ -22,15 +22,6 @@ jobs:
       name: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
       url: ${{ github.ref_name == 'main' && env.PROD_URL || env.STAGE_URL}}
     steps:
-      - name: Check variables
-        run: |
-          echo "$ENVIRONMENT_NAME"
-          echo "$DEPLOYMENT_URL"
-          echo "$BUILD_COMMAND"
-        env:
-          ENVIRONMENT_NAME: ${{ vars.ENVIRONMENT_NAME }}
-          DEPLOYMENT_URL: ${{ vars.DEPLOYMENT_URL }}
-          BUILD_COMMAND: ${{ vars.BUILD_COMMAND }}
       - uses: actions/checkout@v5
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v5
@@ -44,4 +35,5 @@ jobs:
       - name: Deploy with Wrangler
         run: yarn run deploy
         env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
