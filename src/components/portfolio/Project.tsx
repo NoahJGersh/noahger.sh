@@ -76,6 +76,7 @@ export default function Project({
               isSmall
               noMargin
               forceIconColor
+              faIcon={source.fa_icon}
             />
           </div>
         ) : (

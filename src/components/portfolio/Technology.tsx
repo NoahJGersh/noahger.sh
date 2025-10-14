@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useMediaQuery } from "usehooks-ts";
 import { useHover } from "@uidotdev/usehooks";
 import * as Data from "~/utils/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 
 const getTechData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Portfolio.TechConfig> => {
@@ -19,6 +21,7 @@ export default function Technology({
   noMargin,
   isSmall,
   forceIconColor,
+  faIcon,
 }: {
   id: string;
   parentId?: string;
@@ -27,6 +30,7 @@ export default function Technology({
   noMargin?: boolean;
   isSmall?: boolean;
   forceIconColor?: boolean; // Ignore grayscale filter?
+  faIcon?: IconDefinition;
 }) {
   // Check for light mode to use higher contrast icons
   const isLightMode = useMediaQuery("(prefers-color-scheme: light)");
@@ -94,11 +98,23 @@ export default function Technology({
         title={name}
         className="inline-block h-full w-full"
       >
-        <img
-          src={isLightMode && !!logo_light ? logo_light : logo}
-          alt={name}
-          className="h-full w-full"
-        />
+        {faIcon ? (
+          <FontAwesomeIcon
+            icon={faIcon}
+            widthAuto
+            size="xl"
+            className={`
+              h-full w-full
+              hover:text-cyan-400
+            `}
+          />
+        ) : (
+          <img
+            src={isLightMode && !!logo_light ? logo_light : logo}
+            alt={name}
+            className="h-full w-full"
+          />
+        )}
       </a>
       {subtechs && subtechs.length > 0 && dataSubtechs ? (
         <div

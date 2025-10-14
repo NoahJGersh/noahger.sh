@@ -4,6 +4,7 @@ import type { Navigation } from "~/types/navigation";
 import { useQuery } from "@tanstack/react-query";
 import Technology from "../portfolio/Technology";
 import * as Data from "~/utils/data";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const getPageData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Navigation.Page[]> => {
@@ -57,12 +58,14 @@ export default function NavBar() {
           url="https://www.linkedin.com/in/NoahJGersh"
           isSmall
           forceIconColor
+          faIcon={faLinkedin}
         />
         <Technology
           id="github"
           url="https://github.com/NoahJGersh"
           isSmall
           forceIconColor
+          faIcon={faGithub}
         />
       </div>
     </div>
