@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 export namespace Portfolio {
   export type TechConfig = Record<string, Technology>;
 
@@ -12,6 +14,7 @@ export namespace Portfolio {
   interface ProjectSource {
     host: name; // Should be a Technology name
     url: string;
+    fa_icon: IconDefinition;
   }
 
   export interface ProjectProps {
