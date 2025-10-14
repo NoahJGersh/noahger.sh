@@ -1,3 +1,4 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { createFileRoute } from "@tanstack/react-router";
 import Project from "~/components/portfolio/Project";
 
@@ -29,6 +30,7 @@ function RouteComponent() {
         source={{
           host: "github",
           url: "https://github.com/NoahJGersh/noahger.sh",
+          fa_icon: faGithub,
         }}
       >
         I built this website using TanStack. The upcoming Vastest Sea section is
@@ -88,6 +90,7 @@ function RouteComponent() {
         source={{
           host: "github",
           url: "https://github.com/the-metalworks/cosmere-rpg",
+          fa_icon: faGithub,
         }}
       >
         I am an open source contributor to the design, implementation, and
