@@ -8,8 +8,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "start": "node .output/server/index.mjs",
+    "build": "vite build && tsc --noEmit",
+    "build-stage": "vite build --mode staging && tsc --noEmit",
+    "preview": "vite preview",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -26,7 +29,6 @@
     "@tanstack/start-static-server-functions": "^1.132.36",
     "@uidotdev/usehooks": "^2.4.1",
     "@vitejs/plugin-react": "^5.0.4",
-    "nitro": "^3.0.1-alpha.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.14",
@@ -34,6 +36,7 @@
     "vite": "^7.1.7"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.13.12",
     "@eslint/js": "^9.36.0",
     "@types/node": "^24.6.1",
     "@types/react": "^19.1.16",
@@ -50,6 +53,7 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.45.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "wrangler": "^4.42.2"
   }
 }

@@ -1,0 +1,40 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "noahger-sh-dev",
+  "compatibility_date": "2025-09-02",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "@tanstack/react-start/server-entry",
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+    },
+  },
+  "r2_buckets": [
+    {
+      "binding": "STATIC_DATA",
+      "bucket_name": "noahger-sh",
+    },
+  ],
+  "env": {
+    "staging": {
+      "name": "noahger-sh-stage",
+      "r2_buckets": [
+        {
+          "binding": "STATIC_DATA",
+          "bucket_name": "noahger-sh",
+        },
+      ],
+    },
+    "production": {
+      "name": "noahger-sh",
+      "r2_buckets": [
+        {
+          "binding": "STATIC_DATA",
+          "bucket_name": "noahger-sh",
+        },
+      ],
+    },
+  },
+}
