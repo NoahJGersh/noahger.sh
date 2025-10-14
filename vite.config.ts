@@ -4,7 +4,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import tailwindcss from "@tailwindcss/vite";
 import viteReact from "@vitejs/plugin-react";
-import { nitro } from "nitro/vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
   server: {
@@ -12,12 +12,8 @@ export default defineConfig({
   },
   plugins: [
     tsConfigPaths(),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart(),
-    nitro({
-      config: {
-        preset: "aws_amplify",
-      },
-    }),
     viteReact(),
     tailwindcss(),
   ],

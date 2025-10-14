@@ -1,16 +1,13 @@
-import * as fs from "node:fs";
 import { createServerFn, useServerFn } from "@tanstack/react-start";
 import type { Portfolio } from "~/types/portfolio";
 import { useQuery } from "@tanstack/react-query";
 import { useMediaQuery } from "usehooks-ts";
 import { useHover } from "@uidotdev/usehooks";
+import * as Data from "~/utils/data";
 
 const getTechData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Portfolio.TechConfig> => {
-    // Setting up a db for the tech metadata is overkill,
-    // so simple JSON parsing will suffice.
-    const techConfig = fs.readFileSync("public/data/technologies.json");
-    return JSON.parse(techConfig.toString()) as Portfolio.TechConfig;
+    return Data.getTechnologies();
   },
 );
 

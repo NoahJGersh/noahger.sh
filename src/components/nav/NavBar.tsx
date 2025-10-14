@@ -1,14 +1,13 @@
-import * as fs from "node:fs";
 import { Link, useMatchRoute } from "@tanstack/react-router";
 import { createServerFn, useServerFn } from "@tanstack/react-start";
 import type { Navigation } from "~/types/navigation";
 import { useQuery } from "@tanstack/react-query";
 import Technology from "../portfolio/Technology";
+import * as Data from "~/utils/data";
 
 const getPageData = createServerFn({ method: "GET" }).handler(
   async (): Promise<Navigation.Page[]> => {
-    const pageConfig = fs.readFileSync("public/data/pages.json");
-    return JSON.parse(pageConfig.toString()) as Navigation.Page[];
+    return Data.getPages();
   },
 );
 
