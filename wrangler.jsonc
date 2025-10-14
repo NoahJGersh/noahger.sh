@@ -24,6 +24,16 @@
     },
   ],
   "env": {
+    "dev": {
+      "name": "noahger-sh-dev",
+      "r2_buckets": [
+        {
+          "binding": "STATIC_DATA",
+          "bucket_name": "noahger-sh",
+          "remote": true,
+        },
+      ],
+    },
     "staging": {
       "name": "noahger-sh-stage",
       "r2_buckets": [

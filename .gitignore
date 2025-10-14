@@ -5,8 +5,8 @@ node_modules
 .tanstack
 build
 dist
-.output
-.amplify-hosting
+.wrangler
 
 # local utilities
+# may include secrets!!
 .env.local
